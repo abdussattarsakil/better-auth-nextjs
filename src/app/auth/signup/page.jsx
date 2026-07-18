@@ -8,13 +8,15 @@ const SignUpPage = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
+        
+        // const name = e.target.name.value
+        // console.log(name);
+
         const formData = new FormData(e.currentTarget);
-        // const data = {};
-        // // Convert FormData to plain object
-        // formData.forEach((value, key) => {
-        //     data[key] = value.toString();
-        // });
-        // alert(`Form submitted with: ${JSON.stringify(data, null, 2)}`);
+        console.log(formData);
+        const data = Object.fromEntries(formData.entries());
+        console.log("From submitted with:", data);
+
     };
 
     return (
